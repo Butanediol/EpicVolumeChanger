@@ -11,16 +11,26 @@
 		F8506108269EC71000F1491A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8506107269EC71000F1491A /* ContentView.swift */; };
 		F850610A269EC71100F1491A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8506109269EC71100F1491A /* Assets.xcassets */; };
 		F850610D269EC71100F1491A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F850610C269EC71100F1491A /* Preview Assets.xcassets */; };
+		F8506117269ED09F00F1491A /* EightBit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8506116269ED09F00F1491A /* EightBit.swift */; };
+		F8506119269ED2BB00F1491A /* VolumeToolBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8506118269ED2BB00F1491A /* VolumeToolBox.swift */; };
+		F850611B269ED65000F1491A /* FlappyVolume.swift in Sources */ = {isa = PBXBuildFile; fileRef = F850611A269ED65000F1491A /* FlappyVolume.swift */; };
+		F850611D269EE12C00F1491A /* SliderTunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F850611C269EE12C00F1491A /* SliderTunner.swift */; };
+		F89899AE269F239F00D6AF8D /* Shoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89899AD269F239F00D6AF8D /* Shoot.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F8506102269EC71000F1491A /* volume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = volume.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8506102269EC71000F1491A /* Epic Volume Changer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Epic Volume Changer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8506105269EC71000F1491A /* volumeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = volumeApp.swift; sourceTree = "<group>"; };
 		F8506107269EC71000F1491A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F8506109269EC71100F1491A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F850610C269EC71100F1491A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F850610E269EC71100F1491A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F850610F269EC71100F1491A /* volume.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = volume.entitlements; sourceTree = "<group>"; };
+		F8506116269ED09F00F1491A /* EightBit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EightBit.swift; sourceTree = "<group>"; };
+		F8506118269ED2BB00F1491A /* VolumeToolBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeToolBox.swift; sourceTree = "<group>"; };
+		F850611A269ED65000F1491A /* FlappyVolume.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlappyVolume.swift; sourceTree = "<group>"; };
+		F850611C269EE12C00F1491A /* SliderTunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderTunner.swift; sourceTree = "<group>"; };
+		F89899AD269F239F00D6AF8D /* Shoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shoot.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,7 +55,7 @@
 		F8506103269EC71000F1491A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F8506102269EC71000F1491A /* volume.app */,
+				F8506102269EC71000F1491A /* Epic Volume Changer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -55,6 +65,8 @@
 			children = (
 				F8506105269EC71000F1491A /* volumeApp.swift */,
 				F8506107269EC71000F1491A /* ContentView.swift */,
+				F8506118269ED2BB00F1491A /* VolumeToolBox.swift */,
+				F8506115269ED08500F1491A /* VolumeChangers */,
 				F8506109269EC71100F1491A /* Assets.xcassets */,
 				F850610E269EC71100F1491A /* Info.plist */,
 				F850610F269EC71100F1491A /* volume.entitlements */,
@@ -71,12 +83,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		F8506115269ED08500F1491A /* VolumeChangers */ = {
+			isa = PBXGroup;
+			children = (
+				F8506116269ED09F00F1491A /* EightBit.swift */,
+				F850611C269EE12C00F1491A /* SliderTunner.swift */,
+				F850611A269ED65000F1491A /* FlappyVolume.swift */,
+				F89899AD269F239F00D6AF8D /* Shoot.swift */,
+			);
+			path = VolumeChangers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F8506101269EC71000F1491A /* volume */ = {
+		F8506101269EC71000F1491A /* Epic Volume Changer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F8506112269EC71100F1491A /* Build configuration list for PBXNativeTarget "volume" */;
+			buildConfigurationList = F8506112269EC71100F1491A /* Build configuration list for PBXNativeTarget "Epic Volume Changer" */;
 			buildPhases = (
 				F85060FE269EC71000F1491A /* Sources */,
 				F85060FF269EC71000F1491A /* Frameworks */,
@@ -86,9 +109,9 @@
 			);
 			dependencies = (
 			);
-			name = volume;
+			name = "Epic Volume Changer";
 			productName = volume;
-			productReference = F8506102269EC71000F1491A /* volume.app */;
+			productReference = F8506102269EC71000F1491A /* Epic Volume Changer.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -118,7 +141,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F8506101269EC71000F1491A /* volume */,
+				F8506101269EC71000F1491A /* Epic Volume Changer */,
 			);
 		};
 /* End PBXProject section */
@@ -142,6 +165,11 @@
 			files = (
 				F8506108269EC71000F1491A /* ContentView.swift in Sources */,
 				F8506106269EC71000F1491A /* volumeApp.swift in Sources */,
+				F8506117269ED09F00F1491A /* EightBit.swift in Sources */,
+				F850611B269ED65000F1491A /* FlappyVolume.swift in Sources */,
+				F850611D269EE12C00F1491A /* SliderTunner.swift in Sources */,
+				F8506119269ED2BB00F1491A /* VolumeToolBox.swift in Sources */,
+				F89899AE269F239F00D6AF8D /* Shoot.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,7 +351,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F8506112269EC71100F1491A /* Build configuration list for PBXNativeTarget "volume" */ = {
+		F8506112269EC71100F1491A /* Build configuration list for PBXNativeTarget "Epic Volume Changer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F8506113269EC71100F1491A /* Debug */,
