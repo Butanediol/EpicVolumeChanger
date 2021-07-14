@@ -56,6 +56,8 @@
 		F85060F9269EC71000F1491A = {
 			isa = PBXGroup;
 			children = (
+				F89899B8269F364900D6AF8D /* README.md */,
+				F89899AF269F35DE00D6AF8D /* resources */,
 				F8506104269EC71000F1491A /* volume */,
 				F8506103269EC71000F1491A /* Products */,
 			);
@@ -72,7 +74,6 @@
 		F8506104269EC71000F1491A /* volume */ = {
 			isa = PBXGroup;
 			children = (
-				F89899AF269F35DE00D6AF8D /* resources */,
 				F8506105269EC71000F1491A /* volumeApp.swift */,
 				F8506107269EC71000F1491A /* ContentView.swift */,
 				F8506118269ED2BB00F1491A /* VolumeToolBox.swift */,
@@ -81,7 +82,6 @@
 				F850610E269EC71100F1491A /* Info.plist */,
 				F850610F269EC71100F1491A /* volume.entitlements */,
 				F850610B269EC71100F1491A /* Preview Content */,
-				F89899B8269F364900D6AF8D /* README.md */,
 			);
 			path = volume;
 			sourceTree = "<group>";
