@@ -37,6 +37,12 @@ struct ContentView: View {
                         label: {
                             Label("Shoot", systemImage: "hand.point.right.fill")
                         })
+                    
+                    NavigationLink(
+                        destination: ColorAction(),
+                        label: {
+                            Label("Color Action", systemImage: "waveform.path.ecg.rectangle.fill")
+                        })
                 }
                 
             }

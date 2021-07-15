@@ -25,14 +25,21 @@ struct Shoot: View {
                 .frame(maxWidth: 200)
         }
         .padding()
-        ZStack {
-            Text(pressTime == 0 ? "Press and hold!" : "\(String(format: "%.2f", pressTime))s")
-                .padding()
-                .overlay(
-                    RoundedRectangle(cornerRadius: 10)
-                        .stroke(startTime == nil ? Color.blue : Color.secondary, lineWidth: 2)
-                        .frame(width: 200, height: 40)
-                )
+        ZStack(alignment: .leading) {
+            Rectangle()
+                .foregroundColor(.blue)
+                .cornerRadius(10)
+                .clipped()
+                .opacity(0.5)
+                .frame(width: CGFloat(200 * pressTime / 3), height: 30)
+                .animation(.easeInOut)
+            ZStack {
+                Text(pressTime == 0 ? "Press and hold!" : "\(String(format: "%.2f", pressTime))s")
+                    .padding()
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(startTime == nil ? Color.blue : Color.secondary, lineWidth: 2)
+                    .frame(width: 200, height: 30)
+            }
         }
             .gesture(
                 DragGesture(minimumDistance: 0)

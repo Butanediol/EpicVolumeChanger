@@ -2,6 +2,8 @@
 
 An actual implementation of those best volume control interfaces in the world on macOS, built with SwiftUI.
 
+Inspired by [The ~~worst~~ best volume control UI in the world](https://uxdesign.cc/the-worst-volume-control-ui-in-the-world-60713dc86950).
+
 ## How to add new volume changer?
 
 Simply add a new file in folder VolumeChangers. Then add it to ContentView.
@@ -25,3 +27,13 @@ You can use `setVolume(to volume: Float32)` to set volume, or use `getCurrentVol
 - Shoot
 
 ![](https://raw.githubusercontent.com/Butanediol/EpicVolumeChanger/main/resources/shoot.png)
+
+- ColorAction
+
+![](https://raw.githubusercontent.com/Butanediol/EpicVolumeChanger/main/resources/coloraction.png)
+
+## Want wonderful user interface on other platforms?
+
+Check this out! 
+
+[Cyanoxygen/volcontrol-qt](https://github.com/Cyanoxygen/volcontrol-qt)
