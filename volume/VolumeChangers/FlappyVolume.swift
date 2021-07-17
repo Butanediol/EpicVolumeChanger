@@ -9,8 +9,7 @@ import SwiftUI
 
 struct FlappyVolume: View {
     
-    @State var volumeValue: Float32 = getCurrentVolume()
-    @State var isLocked = true
+    @StateObject var viewModel = ViewModel()
     
     var timer = Timer.publish(every: 0.05, on: .main, in: .common).autoconnect()
     
@@ -21,37 +20,43 @@ struct FlappyVolume: View {
                     .frame(width: 200, height: 20)
                     .opacity(0.5)
                 Rectangle()
-                    .frame(width: CGFloat(200 * volumeValue), height: 20)
+                    .frame(width: CGFloat(200 * viewModel.volumeValue), height: 20)
             }
             .cornerRadius(5)
             .clipped()
             .onReceive(timer) { _ in
-                if isLocked == false {
-                    if volumeValue - 0.008 > 0 {
+                if viewModel.isLocked == false {
+                    if viewModel.volumeValue - 0.008 > 0 {
                         withAnimation(.easeInOut) {
-                            volumeValue -= 0.007
+                            viewModel.volumeValue -= 0.007
                         }
-                    } else { volumeValue = 0 }
+                    } else { viewModel.volumeValue = 0 }
                 }
-                setVolume(to: Float32(volumeValue))
+                setVolume(to: Float32(viewModel.volumeValue))
             }
-            Text("Volume: \(String(format: "%.1f", volumeValue * 100))%")
+            Text("Volume: \(String(format: "%.1f", viewModel.volumeValue * 100))%")
             HStack {
                 Button("Tap!") {
-                    if volumeValue + 0.05 <= 1 {
-                        volumeValue += 0.05
+                    if viewModel.volumeValue + 0.05 <= 1 {
+                        viewModel.volumeValue += 0.05
                     } else {
-                        volumeValue = 1
+                        viewModel.volumeValue = 1
                     }
                 }
-                .disabled(isLocked)
+                .disabled(viewModel.isLocked)
                 
-                Button(isLocked ? "Unlock" : " Lock") {
+                Button(viewModel.isLocked ? "Unlock" : " Lock") {
                     withAnimation(.spring()) {
-                        isLocked.toggle()
+                        viewModel.isLocked.toggle()
                     }
                 }
             }
         }
     }
+    
+    class ViewModel: ObservableObject {
+        @Published var volumeValue: Float32 = getCurrentVolume()
+        @Published var isLocked = true
+    }
+    
 }

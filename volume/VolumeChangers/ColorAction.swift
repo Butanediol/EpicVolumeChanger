@@ -9,9 +9,8 @@ import SwiftUI
 import Combine
 
 struct ColorAction: View {
-    @State var volumeValue = getCurrentVolume()
-    @State var offset: Int = 0
-    @State var rightDirection = true
+    
+    @StateObject var viewModel = ViewModel()
     
     var timer = Timer.publish(every: 0.01, on: .main, in: .common).autoconnect()
     
@@ -23,12 +22,12 @@ struct ColorAction: View {
                         .frame(width: 40, height: 200)
                         .opacity(0.5)
                     Rectangle()
-                        .frame(width: 40, height: CGFloat(200 * volumeValue))
+                        .frame(width: 40, height: CGFloat(200 * viewModel.volumeValue))
                 }
                 .cornerRadius(10)
                 .clipped()
                 
-                Text("Volume: \(String(format: "%.0f", volumeValue * 100))%")
+                Text("Volume: \(String(format: "%.0f", viewModel.volumeValue * 100))%")
                 
                 ZStack {
                     Group {
@@ -43,26 +42,26 @@ struct ColorAction: View {
                     Rectangle()
                         .foregroundColor(.white)
                         .frame(width: 200 * 0.01, height: 30)
-                        .offset(x: CGFloat(offset), y: 0)
+                        .offset(x: CGFloat(viewModel.offset), y: 0)
                 }
                 
                 Button("Press") {
                     withAnimation(.spring()) {
-                        if (offset >= -6) && (offset <= 6) {
-                            volumeValue += 0.05
-                            setVolume(to: volumeValue)
+                        if (viewModel.offset >= -6) && (viewModel.offset <= 6) {
+                            viewModel.volumeValue += 0.05
+                            setVolume(to: viewModel.volumeValue)
                         } else {
-                            volumeValue = 0
-                            setVolume(to: volumeValue)
+                            viewModel.volumeValue = 0
+                            setVolume(to: viewModel.volumeValue)
                         }
                     }
                 }
             }
             .onReceive(timer) { _ in
-                if (offset == 100) || (offset == -100) {
-                    rightDirection.toggle()
+                if (viewModel.offset == 100) || (viewModel.offset == -100) {
+                    viewModel.rightDirection.toggle()
                 }
-                offset += rightDirection ? 1 : -1
+                viewModel.offset += viewModel.rightDirection ? 1 : -1
             }
             
             VStack(alignment: .leading) {
@@ -82,4 +81,11 @@ struct ColorAction: View {
             }
         }
     }
+    
+    class ViewModel: ObservableObject {
+        @Published var volumeValue = getCurrentVolume()
+        @Published var offset: Int = 0
+        @Published var rightDirection = true
+    }
+    
 }

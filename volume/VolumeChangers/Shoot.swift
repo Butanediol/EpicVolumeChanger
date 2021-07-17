@@ -8,19 +8,17 @@
 import SwiftUI
 
 struct Shoot: View {
-    @State var startTime: Date?
-    @State var volumeValue: Float32 = getCurrentVolume()
-    @State var pressTimeInterval: Double?
-    @State var pressTime: Double = 0
+    
+    @StateObject var viewModel = ViewModel()
     
     let timer = Timer.publish(every: 0.05, on: .main, in: .common).autoconnect()
     
     var body: some View {
         HStack {
             Image(systemName: "hand.point.right.fill")
-                .rotationEffect(Angle(degrees: pressTime*(-15)))
+                .rotationEffect(Angle(degrees: viewModel.pressTime*(-15)))
                 .font(.largeTitle)
-            Slider(value: $volumeValue, in: 0...1)
+            Slider(value: $viewModel.volumeValue, in: 0...1)
                 .disabled(true)
                 .frame(maxWidth: 200)
         }
@@ -31,35 +29,43 @@ struct Shoot: View {
                 .cornerRadius(10)
                 .clipped()
                 .opacity(0.5)
-                .frame(width: CGFloat(200 * pressTime / 3), height: 30)
+                .frame(width: CGFloat(200 * viewModel.pressTime / 3), height: 30)
                 .animation(.easeInOut)
             ZStack {
-                Text(pressTime == 0 ? "Press and hold!" : "\(String(format: "%.2f", pressTime))s")
+                Text(viewModel.pressTime == 0 ? "Press and hold!" : "\(String(format: "%.2f", viewModel.pressTime))s")
                     .padding()
                 RoundedRectangle(cornerRadius: 10)
-                    .stroke(startTime == nil ? Color.blue : Color.secondary, lineWidth: 2)
+                    .stroke(viewModel.startTime == nil ? Color.blue : Color.secondary, lineWidth: 2)
                     .frame(width: 200, height: 30)
             }
         }
             .gesture(
                 DragGesture(minimumDistance: 0)
                     .onChanged { _ in
-                        if startTime == nil {
-                            startTime = Date()
+                        if viewModel.startTime == nil {
+                            viewModel.startTime = Date()
                         }
                     }
                     .onEnded { _ in
-                        let timeInterval: TimeInterval = startTime!.distance(to: Date())
-                        startTime = nil
-                        pressTime = 0
-                        volumeValue = Float32(timeInterval <= 3 ? timeInterval : 3) / 3
-                        setVolume(to: volumeValue)
+                        let timeInterval: TimeInterval = viewModel.startTime!.distance(to: Date())
+                        viewModel.startTime = nil
+                        viewModel.pressTime = 0
+                        viewModel.volumeValue = Float32(timeInterval <= 3 ? timeInterval : 3) / 3
+                        setVolume(to: viewModel.volumeValue)
                     }
             )
             .onReceive(timer) { _ in
-                if startTime != nil {
-                    pressTime = pressTime + 0.05 <= 3 ? pressTime + 0.05 : 3
+                if viewModel.startTime != nil {
+                    viewModel.pressTime = viewModel.pressTime + 0.05 <= 3 ? viewModel.pressTime + 0.05 : 3
                 }
             }
     }
+    
+    class ViewModel: ObservableObject {
+        @Published var startTime: Date?
+        @Published var volumeValue: Float32 = getCurrentVolume()
+        @Published var pressTimeInterval: Double?
+        @Published var pressTime: Double = 0
+    }
+    
 }
