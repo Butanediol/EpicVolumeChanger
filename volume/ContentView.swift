@@ -49,6 +49,12 @@ struct ContentView: View {
                         label: {
                             Label("Selection", systemImage: "checkmark.circle.fill")
                         })
+                    
+                    NavigationLink(
+                        destination: IceHockey(),
+                        label: {
+                            Label("Ice Hockey", systemImage: "sportscourt.fill")
+                        })
                 }
                 
             }
