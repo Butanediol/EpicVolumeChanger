@@ -15,6 +15,7 @@
 		F8506119269ED2BB00F1491A /* VolumeToolBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8506118269ED2BB00F1491A /* VolumeToolBox.swift */; };
 		F850611B269ED65000F1491A /* FlappyVolume.swift in Sources */ = {isa = PBXBuildFile; fileRef = F850611A269ED65000F1491A /* FlappyVolume.swift */; };
 		F850611D269EE12C00F1491A /* SliderTunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F850611C269EE12C00F1491A /* SliderTunner.swift */; };
+		F87A156326A482CB008EAD56 /* Selection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87A156226A482CB008EAD56 /* Selection.swift */; };
 		F89899AE269F239F00D6AF8D /* Shoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89899AD269F239F00D6AF8D /* Shoot.swift */; };
 		F89899B4269F363300D6AF8D /* 8bit.png in Resources */ = {isa = PBXBuildFile; fileRef = F89899B0269F363300D6AF8D /* 8bit.png */; };
 		F89899B5269F363300D6AF8D /* slider.png in Resources */ = {isa = PBXBuildFile; fileRef = F89899B1269F363300D6AF8D /* slider.png */; };
@@ -36,6 +37,7 @@
 		F8506118269ED2BB00F1491A /* VolumeToolBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeToolBox.swift; sourceTree = "<group>"; };
 		F850611A269ED65000F1491A /* FlappyVolume.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlappyVolume.swift; sourceTree = "<group>"; };
 		F850611C269EE12C00F1491A /* SliderTunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderTunner.swift; sourceTree = "<group>"; };
+		F87A156226A482CB008EAD56 /* Selection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selection.swift; sourceTree = "<group>"; };
 		F89899AD269F239F00D6AF8D /* Shoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shoot.swift; sourceTree = "<group>"; };
 		F89899B0269F363300D6AF8D /* 8bit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8bit.png; sourceTree = "<group>"; };
 		F89899B1269F363300D6AF8D /* slider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slider.png; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				F8506116269ED09F00F1491A /* EightBit.swift */,
+				F87A156226A482CB008EAD56 /* Selection.swift */,
 				F850611C269EE12C00F1491A /* SliderTunner.swift */,
 				F850611A269ED65000F1491A /* FlappyVolume.swift */,
 				F89899AD269F239F00D6AF8D /* Shoot.swift */,
@@ -202,6 +205,7 @@
 				F8506117269ED09F00F1491A /* EightBit.swift in Sources */,
 				F850611B269ED65000F1491A /* FlappyVolume.swift in Sources */,
 				F850611D269EE12C00F1491A /* SliderTunner.swift in Sources */,
+				F87A156326A482CB008EAD56 /* Selection.swift in Sources */,
 				F8506119269ED2BB00F1491A /* VolumeToolBox.swift in Sources */,
 				F89899AE269F239F00D6AF8D /* Shoot.swift in Sources */,
 			);

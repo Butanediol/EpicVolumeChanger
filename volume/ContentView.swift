@@ -43,6 +43,12 @@ struct ContentView: View {
                         label: {
                             Label("Color Action", systemImage: "waveform.path.ecg.rectangle.fill")
                         })
+                    
+                    NavigationLink(
+                        destination: Selection(),
+                        label: {
+                            Label("Selection", systemImage: "checkmark.circle.fill")
+                        })
                 }
                 
             }
