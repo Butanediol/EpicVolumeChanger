@@ -15,6 +15,8 @@
 		F8506119269ED2BB00F1491A /* VolumeToolBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8506118269ED2BB00F1491A /* VolumeToolBox.swift */; };
 		F850611B269ED65000F1491A /* FlappyVolume.swift in Sources */ = {isa = PBXBuildFile; fileRef = F850611A269ED65000F1491A /* FlappyVolume.swift */; };
 		F850611D269EE12C00F1491A /* SliderTunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F850611C269EE12C00F1491A /* SliderTunner.swift */; };
+		F851EE9526A973220035ECEE /* selection.png in Resources */ = {isa = PBXBuildFile; fileRef = F851EE9326A973220035ECEE /* selection.png */; };
+		F851EE9626A973220035ECEE /* ice_hockey.png in Resources */ = {isa = PBXBuildFile; fileRef = F851EE9426A973220035ECEE /* ice_hockey.png */; };
 		F87A156326A482CB008EAD56 /* Selection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87A156226A482CB008EAD56 /* Selection.swift */; };
 		F87A156526A4941F008EAD56 /* IceHockey.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87A156426A4941F008EAD56 /* IceHockey.swift */; };
 		F89899AE269F239F00D6AF8D /* Shoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89899AD269F239F00D6AF8D /* Shoot.swift */; };
@@ -38,6 +40,8 @@
 		F8506118269ED2BB00F1491A /* VolumeToolBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeToolBox.swift; sourceTree = "<group>"; };
 		F850611A269ED65000F1491A /* FlappyVolume.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlappyVolume.swift; sourceTree = "<group>"; };
 		F850611C269EE12C00F1491A /* SliderTunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderTunner.swift; sourceTree = "<group>"; };
+		F851EE9326A973220035ECEE /* selection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selection.png; sourceTree = "<group>"; };
+		F851EE9426A973220035ECEE /* ice_hockey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ice_hockey.png; sourceTree = "<group>"; };
 		F87A156226A482CB008EAD56 /* Selection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selection.swift; sourceTree = "<group>"; };
 		F87A156426A4941F008EAD56 /* IceHockey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceHockey.swift; sourceTree = "<group>"; };
 		F89899AD269F239F00D6AF8D /* Shoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shoot.swift; sourceTree = "<group>"; };
@@ -82,9 +86,8 @@
 		F8506104269EC71000F1491A /* volume */ = {
 			isa = PBXGroup;
 			children = (
-				F8506105269EC71000F1491A /* volumeApp.swift */,
-				F8506107269EC71000F1491A /* ContentView.swift */,
-				F8506118269ED2BB00F1491A /* VolumeToolBox.swift */,
+				F851EE9126A972740035ECEE /* Bases */,
+				F851EE9226A972A00035ECEE /* HelpfulFunctions */,
 				F8506115269ED08500F1491A /* VolumeChangers */,
 				F8506109269EC71100F1491A /* Assets.xcassets */,
 				F850610E269EC71100F1491A /* Info.plist */,
@@ -116,9 +119,28 @@
 			path = VolumeChangers;
 			sourceTree = "<group>";
 		};
+		F851EE9126A972740035ECEE /* Bases */ = {
+			isa = PBXGroup;
+			children = (
+				F8506105269EC71000F1491A /* volumeApp.swift */,
+				F8506107269EC71000F1491A /* ContentView.swift */,
+			);
+			path = Bases;
+			sourceTree = "<group>";
+		};
+		F851EE9226A972A00035ECEE /* HelpfulFunctions */ = {
+			isa = PBXGroup;
+			children = (
+				F8506118269ED2BB00F1491A /* VolumeToolBox.swift */,
+			);
+			path = HelpfulFunctions;
+			sourceTree = "<group>";
+		};
 		F89899AF269F35DE00D6AF8D /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				F851EE9426A973220035ECEE /* ice_hockey.png */,
+				F851EE9326A973220035ECEE /* selection.png */,
 				F89899B0269F363300D6AF8D /* 8bit.png */,
 				F89899B2269F363300D6AF8D /* flappy.png */,
 				F89899B3269F363300D6AF8D /* shoot.png */,
@@ -190,7 +212,9 @@
 				F89899B4269F363300D6AF8D /* 8bit.png in Resources */,
 				F8EAC59526A0826200DB6F0B /* coloraction.png in Resources */,
 				F850610D269EC71100F1491A /* Preview Assets.xcassets in Resources */,
+				F851EE9626A973220035ECEE /* ice_hockey.png in Resources */,
 				F850610A269EC71100F1491A /* Assets.xcassets in Resources */,
+				F851EE9526A973220035ECEE /* selection.png in Resources */,
 				F89899B6269F363300D6AF8D /* flappy.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

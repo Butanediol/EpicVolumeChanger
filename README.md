@@ -32,6 +32,14 @@ You can use `setVolume(to volume: Float32)` to set volume, or use `getCurrentVol
 
 ![](https://raw.githubusercontent.com/Butanediol/EpicVolumeChanger/main/resources/coloraction.png)
 
+- Selection
+
+![](https://raw.githubusercontent.com/Butanediol/EpicVolumeChanger/main/resources/selection.png)
+
+- Ice Hockey
+
+![](https://raw.githubusercontent.com/Butanediol/EpicVolumeChanger/main/resources/ice_hockey.png)
+
 ## Want wonderful user interface on other platforms?
 
 Check this out! 
