@@ -19,13 +19,13 @@ struct IceHockey: View {
             ZStack {
                 RoundedRectangle(cornerRadius: 5)
                     .frame(width: viewModel.expanded ? 400 : 200, height: viewModel.expanded ? 300 : 10)
-                    .gesture(DragGesture().onChanged { viewModel.stickDragged(value: $0) })
+                    .gesture(DragGesture(minimumDistance: 0).onChanged { viewModel.stickDragged(value: $0) })
                 Rectangle()
                     .frame(width: viewModel.expanded ? 10 : 2, height: viewModel.expanded ? 300 : 20)
                     .offset(x: viewModel.lineOffset)
                     .foregroundColor(.blue)
                 Text("🏒️")
-                    .font(.system(size: 100))
+                    .font(.system(size: viewModel.stickSize))
                     .opacity(viewModel.expanded ? 1 : 0)
                     .position(viewModel.stickPosition)
                 Circle()
@@ -67,6 +67,22 @@ struct IceHockey: View {
         @Published var moves = 0
         
         var canPushNotification = false
+        var stickSize: CGFloat {
+            if stickInRange {
+                return stickPosition.y / 8 + 50
+            } else {
+                print(stickPosition)
+                return 10
+            }
+        }
+        
+        private var stickInRange: Bool {
+            if 100...500 ~= Int(stickPosition.x) && 100...400 ~= Int(stickPosition.y) {
+                return true
+            } else {
+                return false
+            }
+        }
         
         func enableGameMode() {
             withAnimation(.easeInOut(duration: 1)) {
@@ -104,10 +120,14 @@ struct IceHockey: View {
         
         func stickDragged(value: DragGesture.Value) {
             if expanded {
+                
                 stickPosition.x = value.location.x + 100
                 stickPosition.y = value.location.y + 100
-                moves += 1
-                velocity += 0.001
+                
+                if stickInRange {
+                    moves += 1
+                    velocity += 0.001
+                }
             }
         }
         
