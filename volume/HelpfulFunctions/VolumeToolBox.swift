@@ -32,7 +32,7 @@ func setVolume(to volume: Float32) {
     let volumeSize = UInt32(MemoryLayout.size(ofValue: volume))
     
     var volumePropertyAddress = AudioObjectPropertyAddress(
-        mSelector: kAudioHardwareServiceDeviceProperty_VirtualMasterVolume,
+        mSelector: kAudioHardwareServiceDeviceProperty_VirtualMainVolume,
         mScope: kAudioDevicePropertyScopeOutput,
         mElement: kAudioObjectPropertyElementMaster)
     
@@ -67,7 +67,7 @@ func getCurrentVolume() -> Float32 {
     var volumeSize = UInt32(MemoryLayout.size(ofValue: volume))
 
     var volumePropertyAddress = AudioObjectPropertyAddress(
-        mSelector: kAudioHardwareServiceDeviceProperty_VirtualMasterVolume,
+        mSelector: kAudioHardwareServiceDeviceProperty_VirtualMainVolume,
         mScope: kAudioDevicePropertyScopeOutput,
         mElement: kAudioObjectPropertyElementMaster)
     
