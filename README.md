@@ -14,31 +14,31 @@ You can use `setVolume(to volume: Float32)` to set volume, or use `getCurrentVol
 
 - 8-bit
 
-![](https://raw.githubusercontent.com/Butanediol/EpicVolumeChanger/main/resources/8bit.png)
+![](https://raw.githubusercontent.com/Butanediol/EpicVolumeChanger/main/resources/8bit.gif)
 
 - Flappy volume
 
-![](https://raw.githubusercontent.com/Butanediol/EpicVolumeChanger/main/resources/flappy.png)
+![](https://raw.githubusercontent.com/Butanediol/EpicVolumeChanger/main/resources/flappy.gif)
 
 - Slider (not the ordinary one)
 
-![](https://raw.githubusercontent.com/Butanediol/EpicVolumeChanger/main/resources/slider.png)
+![](https://raw.githubusercontent.com/Butanediol/EpicVolumeChanger/main/resources/slider.gif)
 
 - Shoot
 
-![](https://raw.githubusercontent.com/Butanediol/EpicVolumeChanger/main/resources/shoot.png)
+![](https://raw.githubusercontent.com/Butanediol/EpicVolumeChanger/main/resources/shoot.gif)
 
 - ColorAction
 
-![](https://raw.githubusercontent.com/Butanediol/EpicVolumeChanger/main/resources/coloraction.png)
+![](https://raw.githubusercontent.com/Butanediol/EpicVolumeChanger/main/resources/coloraction.gif)
 
 - Selection
 
-![](https://raw.githubusercontent.com/Butanediol/EpicVolumeChanger/main/resources/selection.png)
+![](https://raw.githubusercontent.com/Butanediol/EpicVolumeChanger/main/resources/selection.gif)
 
 - Ice Hockey
 
-![](https://raw.githubusercontent.com/Butanediol/EpicVolumeChanger/main/resources/ice_hockey.png)
+![](https://raw.githubusercontent.com/Butanediol/EpicVolumeChanger/main/resources/ice_hockey.gif)
 
 ## Want wonderful user interface on other platforms?
 
